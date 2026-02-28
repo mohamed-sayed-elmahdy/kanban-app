@@ -8,7 +8,7 @@ A beautiful Kanban-style task management application built with **Next.js 14**, 
 
 - 📋 **4 Kanban columns** – Backlog, In Progress, Review, Done
 - ✏️ **Create, edit, delete** tasks via modal dialogs
-- 🖱️ **Drag & drop** tasks between columns ([@dnd-kit](https://dnd-kit.com/))
+- 🖱️ **Drag & drop** tasks between columns
 - 🔍 **Debounced search** – filter tasks by title or description in real time
 - 📄 **"Load More" pagination** per column (powered by `useInfiniteQuery`)
 - ⚡ **React Query caching** – smart cache invalidation on every mutation
