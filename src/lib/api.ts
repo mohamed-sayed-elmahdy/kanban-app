@@ -3,7 +3,7 @@ import { Column, Task } from '@/types/task';
 
 /** Base axios instance */
 const api = axios.create({
-  baseURL: 'http://localhost:4000',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000',
 });
 
 export interface FetchTasksParams {
