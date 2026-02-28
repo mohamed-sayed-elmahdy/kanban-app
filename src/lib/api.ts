@@ -19,7 +19,7 @@ export const fetchTasks = async (params: FetchTasksParams) => {
       params: {
           column: params.column,
           _page: params._page ?? 1,
-          _per_page: params._limit ?? 4,
+          _limit: params._limit ?? 4,
       },
   });
 
