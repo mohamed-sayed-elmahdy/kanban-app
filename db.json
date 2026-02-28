@@ -1,139 +1,139 @@
 {
   "tasks": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Design system setup",
       "description": "Configure Tailwind tokens, fonts, and color palette for the design system.",
       "column": "done"
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Auth flow wireframes",
       "description": "Create low-fidelity wireframes for login, register, and password-reset screens.",
       "column": "done"
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "Database schema v1",
       "description": "Draft initial ERD for users, tasks, and projects tables.",
       "column": "done"
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "CI/CD pipeline",
       "description": "Set up GitHub Actions for lint, test, and deploy stages.",
       "column": "done"
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "API rate limiting",
       "description": "Implement token-bucket rate limiting on all public endpoints.",
       "column": "done"
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "Landing page copy",
       "description": "Write hero section headline, sub-copy, and CTA button text.",
       "column": "review"
     },
     {
-      "id": "7",
+      "id": 7,
       "title": "Unit tests – auth module",
       "description": "Write Jest unit tests for login, token refresh, and logout handlers.",
       "column": "review"
     },
     {
-      "id": "8",
+      "id": 8,
       "title": "Accessibility audit",
       "description": "Run axe-core on all pages and fix critical WCAG 2.1 AA issues.",
       "column": "review"
     },
     {
-      "id": "9",
+      "id": 9,
       "title": "Performance profiling",
       "description": "Profile React render bottlenecks with Profiler API",
       "column": "review"
     },
     {
-      "id": "10",
+      "id": 10,
       "title": "i18n setup",
       "description": "Integrate next-intl and add English and Arabic translation files.",
       "column": "review"
     },
     {
+      "id": 11,
       "title": "Kanban drag-and-drop",
       "description": "Implement dnd-kit drag-and-drop to move tasks between board columns.",
-      "column": "review",
-      "id": "11"
+      "column": "review"
     },
     {
+      "id": 12,
       "title": "Infinite scroll columns",
       "description": "Add useInfiniteQuery to each Kanban column for paginated task loading.",
-      "column": "review",
-      "id": "12"
+      "column": "review"
     },
     {
-      "id": "13",
+      "id": 13,
       "title": "Search & filter bar",
       "description": "Build a debounced search input that filters tasks by title and description.",
       "column": "in_progress"
     },
     {
-      "id": "14",
+      "id": 14,
       "title": "Dark mode toggle",
       "description": "Implement system-preference and manual dark/light mode switching via next-themes.",
       "column": "in_progress"
     },
     {
-      "id": "15",
+      "id": 15,
       "title": "Notification system",
       "description": "Design in-app toast notifications for CRUD operations and errors.",
       "column": "in_progress"
     },
     {
+      "id": 17,
       "title": "User profile page",
       "description": "Build profile page with avatar upload, display name",
-      "column": "in_progress",
-      "id": "17"
+      "column": "in_progress"
     },
     {
+      "id": 18,
       "title": "Task due dates",
       "description": "Add an optional due-date field to tasks with date picker and overdue highlighting.",
-      "column": "todo",
-      "id": "18"
+      "column": "todo"
     },
     {
-      "id": "19",
+      "id": 19,
       "title": "Email notifications",
       "description": "Send transactional emails for task assignments and due-date reminders.",
       "column": "todo"
     },
     {
-      "id": "20",
+      "id": 20,
       "title": "Analytics dashboard",
       "description": "Create charts showing task throughput per sprint and column distribution.",
       "column": "todo"
     },
     {
-      "id": "21",
+      "id": 21,
       "title": "Export to CSV",
       "description": "Allow users to export their task list to a CSV file.",
       "column": "todo"
     },
     {
-      "id": "22",
+      "id": 22,
       "title": "Keyboard shortcuts",
       "description": "Add keyboard shortcuts for common actions: new task, search, move card.",
       "column": "todo"
     },
     {
-      "id": "23",
+      "id": 23,
       "title": "Multi-board support",
       "description": "Allow users to create and switch between multiple Kanban boards.",
       "column": "todo"
     },
     {
-      "id": "24",
+      "id": 24,
       "title": "Audit log",
       "description": "Record every task state change in an append-only audit log table.",
       "column": "todo"
