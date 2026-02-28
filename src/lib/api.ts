@@ -15,30 +15,26 @@ export interface FetchTasksParams {
 
 /** Fetch tasks (paginated + optional search) */
 export const fetchTasks = async (params: FetchTasksParams) => {
-    const res = await api.get('/tasks', {
-        params: {
-            column: params.column,
-            _page: params._page ?? 1,
-            _per_page: params._limit ?? 4,
-        },
-    });
+  const res = await api.get('/tasks', {
+      params: {
+          column: params.column,
+          _page: params._page ?? 1,
+          _per_page: params._limit ?? 4,
+      },
+  });
 
-    const { data: tasks, next } = res.data;
+  const tasks = res.data as Task[];
 
-    if (params.q) {
-        const q = params.q.toLowerCase();
-        return {
-            tasks: tasks.filter((task: Task) =>
-                task.title.toLowerCase().includes(q) ||
-                task.description.toLowerCase().includes(q)
-            ),
-            next,
-        };
-    }
+  if (params.q) {
+      const q = params.q.toLowerCase();
+      return tasks.filter(task =>
+          task.title.toLowerCase().includes(q) ||
+          task.description.toLowerCase().includes(q)
+      );
+  }
 
-    return { tasks, next };
+  return tasks;
 };
-
 
 /** Create task */
 export const createTask = (data: Omit<Task, 'id'>) =>

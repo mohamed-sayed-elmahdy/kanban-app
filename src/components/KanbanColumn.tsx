@@ -42,11 +42,14 @@ export default function KanbanColumn({ column, label, search, colorClass, header
         queryKey: ['tasks', column, search],
         queryFn: ({ pageParam = 1 }) =>
             fetchTasks({ column, q: search || undefined, _page: pageParam, _limit: 4 }),
-        getNextPageParam: (lastPage) => lastPage.next ?? undefined,
+        getNextPageParam: (lastPage, allPages) => {
+            if (!Array.isArray(lastPage) || lastPage.length < 4) return undefined;
+            return allPages.length + 1;
+        },
         initialPageParam: 1,
     });
 
-    const tasks: Task[] = data?.pages.flatMap(page => page.tasks) ?? [];
+    const tasks: Task[] = data?.pages.flatMap(page => page) ?? [];
     const totalCount = tasks.length;
 
 
