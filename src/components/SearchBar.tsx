@@ -11,7 +11,7 @@ interface Props {
 /** Debounced search bar – fires onChange 300ms after user stops typing. */
 export default function SearchBar({ value, onChange }: Props) {
     const [local, setLocal] = useState(value);
-    const timer = useRef<ReturnType<typeof setTimeout>>();
+   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
         setLocal(value);
@@ -20,7 +20,7 @@ export default function SearchBar({ value, onChange }: Props) {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val = e.target.value;
         setLocal(val);
-        clearTimeout(timer.current);
+        clearTimeout(timer.current ?? undefined);
         timer.current = setTimeout(() => onChange(val), 300);
     };
 
